@@ -1,6 +1,18 @@
 
 import React from 'react';
-import { ArrowRight, UserCircle, ShoppingBag, ClipboardCheck, Megaphone, CheckCircle2, Search, MessageCircle, Link2, Handshake } from 'lucide-react';
+import { 
+  ArrowRight, 
+  UserCircle, 
+  ShoppingBag, 
+  ClipboardCheck, 
+  Megaphone, 
+  CheckCircle2, 
+  Search, 
+  MessageCircle, 
+  Link2, 
+  Handshake,
+  ShieldCheck
+} from 'lucide-react';
 
 const HowItWorks: React.FC = () => {
   const sellerSteps = [
@@ -83,5 +95,4 @@ const HowItWorks: React.FC = () => {
   );
 };
 
-import { ShieldCheck } from 'lucide-react';
 export default HowItWorks;

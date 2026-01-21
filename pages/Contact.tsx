@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { Mail, MessageCircle, MapPin, Clock } from 'lucide-react';
-import { CONTACT_DETAILS } from '../constants';
-import WhatsAppForm from '../components/WhatsAppForm';
+import { CONTACT_DETAILS } from '../constants.ts';
+import WhatsAppForm from '../components/WhatsAppForm.tsx';
 
 const Contact: React.FC = () => {
   return (

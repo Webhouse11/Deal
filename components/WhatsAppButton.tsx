@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
-import { CONTACT_DETAILS } from '../constants';
+import { CONTACT_DETAILS } from '../constants.ts';
 
 const WhatsAppButton: React.FC = () => {
   const whatsappUrl = `https://wa.me/${CONTACT_DETAILS.WHATSAPP_NUMBER.replace(/\+/g, '').replace(/\s/g, '')}`;

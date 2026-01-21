@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
-import { CONTACT_DETAILS } from '../constants';
+import { CONTACT_DETAILS } from '../constants.ts';
 
 const WhatsAppForm: React.FC = () => {
   const [formData, setFormData] = useState({

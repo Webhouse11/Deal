@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Mail, MessageCircle } from 'lucide-react';
-import { CONTACT_DETAILS, ROUTES } from '../constants';
+import { CONTACT_DETAILS, ROUTES } from '../constants.ts';
 
 const Footer: React.FC = () => {
   return (

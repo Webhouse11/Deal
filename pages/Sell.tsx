@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { CheckCircle, AlertCircle, MessageCircle } from 'lucide-react';
-import { CONTACT_DETAILS } from '../constants';
-import WhatsAppForm from '../components/WhatsAppForm';
+import { CONTACT_DETAILS } from '../constants.ts';
+import WhatsAppForm from '../components/WhatsAppForm.tsx';
 
 const Sell: React.FC = () => {
   const requirements = [

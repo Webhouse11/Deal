@@ -2,9 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ShieldCheck, UserCheck, MessageSquare } from 'lucide-react';
-import { ROUTES } from '../constants';
-import WhatsAppForm from '../components/WhatsAppForm';
-import Testimonials from '../components/Testimonials';
+import { ROUTES } from '../constants.ts';
+import WhatsAppForm from '../components/WhatsAppForm.tsx';
+import Testimonials from '../components/Testimonials.tsx';
 
 const Home: React.FC = () => {
   const trustPoints = [

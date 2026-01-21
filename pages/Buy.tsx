@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { ShieldCheck, CheckCircle, MessageCircle, Star } from 'lucide-react';
-import { CONTACT_DETAILS } from '../constants';
-import WhatsAppForm from '../components/WhatsAppForm';
+import { CONTACT_DETAILS } from '../constants.ts';
+import WhatsAppForm from '../components/WhatsAppForm.tsx';
 
 const Buy: React.FC = () => {
   const benefits = [

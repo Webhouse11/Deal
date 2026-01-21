@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ShieldCheck } from 'lucide-react';
-import { ROUTES, CONTACT_DETAILS } from '../constants';
+import { ROUTES, CONTACT_DETAILS } from '../constants.ts';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
