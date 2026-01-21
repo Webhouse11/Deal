@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { CheckCircle, AlertCircle, MessageCircle } from 'lucide-react';
-import { CONTACT_DETAILS } from '../constants.ts';
 import WhatsAppForm from '../components/WhatsAppForm.tsx';
 
 const Sell: React.FC = () => {
@@ -11,6 +10,10 @@ const Sell: React.FC = () => {
     "Honest pricing",
     "Availability commitment"
   ];
+
+  const scrollToForm = () => {
+    document.getElementById('contact-form-anchor')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="py-16 px-4 md:px-6">
@@ -37,13 +40,13 @@ const Sell: React.FC = () => {
               ))}
             </ul>
             <div className="mt-10">
-              <a
-                href={`https://wa.me/${CONTACT_DETAILS.WHATSAPP_NUMBER.replace(/\+/g, '')}`}
-                className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors"
+              <button
+                onClick={scrollToForm}
+                className="w-full inline-flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all active:scale-95 shadow-lg shadow-blue-100"
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>List My Product on WhatsApp</span>
-              </a>
+                <span>Fill Sell Inquiry Form</span>
+              </button>
             </div>
           </div>
 
@@ -69,9 +72,9 @@ const Sell: React.FC = () => {
         <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-slate-900">Ready to List?</h2>
-            <p className="text-slate-600">Fill this quick form and we'll handle the rest.</p>
+            <p className="text-slate-600">Complete the form below to initiate your listing on WhatsApp.</p>
           </div>
-          <WhatsAppForm />
+          <WhatsAppForm defaultRole="Seller" sourcePage="Sell Page" />
         </div>
       </div>
     </div>

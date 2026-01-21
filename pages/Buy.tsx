@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { ShieldCheck, CheckCircle, MessageCircle, Star } from 'lucide-react';
-import { CONTACT_DETAILS } from '../constants.ts';
+import { ShieldCheck, MessageCircle, Star } from 'lucide-react';
 import WhatsAppForm from '../components/WhatsAppForm.tsx';
 
 const Buy: React.FC = () => {
@@ -11,6 +10,10 @@ const Buy: React.FC = () => {
     { title: "Clear Communication", text: "No more confusing chats. We provide professional deal coordination." },
     { title: "Safe Deal Process", text: "Meet in person, inspect, and complete the transaction securely." }
   ];
+
+  const scrollToForm = () => {
+    document.getElementById('contact-form-anchor')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <div className="py-16 px-4 md:px-6">
@@ -34,19 +37,19 @@ const Buy: React.FC = () => {
           ))}
         </div>
 
-        <div className="bg-green-600 text-white rounded-3xl p-8 md:p-12 text-center mb-16">
+        <div className="bg-green-600 text-white rounded-3xl p-8 md:p-12 text-center mb-16 shadow-xl">
           <Star className="w-10 h-10 mx-auto mb-6 text-green-200" />
           <h2 className="text-2xl md:text-3xl font-bold mb-4">Quality Guaranteed</h2>
           <p className="text-green-50 mb-8 max-w-lg mx-auto">
             Scams are a thing of the past. At DealBridge, we verify every single product before it's even listed.
           </p>
-          <a
-            href={`https://wa.me/${CONTACT_DETAILS.WHATSAPP_NUMBER.replace(/\+/g, '')}`}
-            className="inline-flex items-center space-x-2 bg-white text-green-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-50 transition-colors"
+          <button
+            onClick={scrollToForm}
+            className="inline-flex items-center space-x-2 bg-white text-green-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-50 transition-all active:scale-95 shadow-lg"
           >
             <MessageCircle className="w-5 h-5" />
-            <span>Contact DealBridge on WhatsApp</span>
-          </a>
+            <span>Fill Buy Inquiry Form</span>
+          </button>
         </div>
 
         <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12">
@@ -54,7 +57,7 @@ const Buy: React.FC = () => {
             <h2 className="text-2xl font-bold text-slate-900">Looking for something specific?</h2>
             <p className="text-slate-600">Tell us what you're looking for, and we'll find a verified seller for you.</p>
           </div>
-          <WhatsAppForm />
+          <WhatsAppForm defaultRole="Buyer" sourcePage="Buy Page" />
         </div>
       </div>
     </div>
